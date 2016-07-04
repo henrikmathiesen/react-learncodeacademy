@@ -1,0 +1,19 @@
+{
+  "name": "reactlearncodeacademy",
+  "version": "1.0.0",
+  "description": "More React, learning from youtube course on learn code academy:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henrikmathiesen/reactLearnCodeAcademy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henrikmathiesen/reactLearnCodeAcademy/issues"
+  },
+  "homepage": "https://github.com/henrikmathiesen/reactLearnCodeAcademy#readme"
+}
