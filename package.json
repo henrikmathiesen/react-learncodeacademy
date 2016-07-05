@@ -4,7 +4,8 @@
   "description": "More React, learning from youtube course on learn code academy:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack-00": "webpack --config ./00-module-loaders/webpack.config.js"
   },
   "repository": {
     "type": "git",
