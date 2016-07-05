@@ -10,5 +10,22 @@ module.exports = {
         new webpack.DefinePlugin({ 'process.env.NODE_ENV': '"production"' }),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
-    ]
+    ],
+    watch: isDebug,
+
+    module: {
+        loaders: [
+            {
+                test: /.jsx?$/,
+                loader: 'babel-loader',
+                include: [
+                    path.resolve(__dirname, 'src')
+                ],
+                query: {
+                    presets: ['es2015', 'react'],
+                    plugins: ['react-html-attrs'] // , 'transform-class-properties'
+                }
+            }
+        ]
+    }
 };
