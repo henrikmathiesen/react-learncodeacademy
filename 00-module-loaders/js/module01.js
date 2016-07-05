@@ -1,5 +1,3 @@
-/// <reference path="../../typings/tsd.d.ts" />
-
 var $ = require('jquery');
 
 console.log("Module 01");

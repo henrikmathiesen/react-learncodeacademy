@@ -23,7 +23,7 @@ module.exports = {
                 ],
                 query: {
                     presets: ['es2015', 'react'],
-                    plugins: ['react-html-attrs'] // , 'transform-class-properties'
+                    plugins: ['react-html-attrs'] // , 'transform-class-properties' (dont see a need for it ...)
                 }
             }
         ]
