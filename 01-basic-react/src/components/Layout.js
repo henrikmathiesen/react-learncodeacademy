@@ -30,9 +30,11 @@ export default class Layout extends React.Component {
             this.setState({ name: "Benke" });                                           // set state
         }, 2000);
 
-        return (
+        return (                                                                        // inject a prop into header elements, Header then passes them through to Title
             <div>
-                <Header/>
+                <Header title={name} />
+                <Header title={"Bertil"} />
+                <Header title={this.state.name} />
                 <div>
                     {items}
                 </div>
