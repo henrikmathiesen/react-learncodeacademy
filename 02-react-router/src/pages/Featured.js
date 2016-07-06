@@ -10,7 +10,9 @@ export default class Featured extends React.Component {
             "About Adam",
             "Bertils beginnings",
             "Ceasars new Sallad",
-            "David and Goliath"
+            "David and Goliath",
+            "Eric Jordan",
+            "Fredriks many great fishes"
         ].map((title, i) => <Article key={i} title={title} />);
 
         const adText = [
