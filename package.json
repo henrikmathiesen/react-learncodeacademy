@@ -31,8 +31,10 @@
   },
   "dependencies": {
     "bootstrap-without-jquery": "^1.0.4",
+    "history": "^3.0.0",
     "jquery": "^3.0.0",
     "react": "^15.2.0",
-    "react-dom": "^15.2.0"
+    "react-dom": "^15.2.0",
+    "react-router": "^2.5.2"
   }
 }
