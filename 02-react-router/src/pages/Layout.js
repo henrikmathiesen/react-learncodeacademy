@@ -5,7 +5,7 @@ export default class Layout extends React.Component {
     render() {
         return (
             <div>
-                <Header />
+                <Header routeArgs={this.props} />
                 {this.props.children}
             </div>
         );
