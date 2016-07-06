@@ -2,7 +2,7 @@ import React                    from 'react';
 import { Link }                 from 'react-router';
 
 export default class Layout extends React.Component {
-    goBack(){
+    goBack() {
         //console.log(this.props.routeArgs);
         this.props.routeArgs.history.goBack();                      // deprecated but we use it for now
         //this.props.routeArgs.history.pushState(null, "/");        // deprecated but we use it for now
@@ -10,14 +10,17 @@ export default class Layout extends React.Component {
     }
 
     render() {
+        const {history} = this.props.routeArgs;
+        console.log(history.isActive('archives'));
+
         return (
             <div>
                 <h1>Henry News</h1>
-                <Link to="archives">Archives</Link>
-                <span>&nbsp;</span>
-                <Link to="settings"><button class="btn btn-success">Settings</button></Link>
-                <span>&nbsp;</span>
-                <button onClick={this.goBack.bind(this)}>Back</button>
+                <Link to="archives" activeClassName="test">Archives</Link>
+                <span>&nbsp; </span>
+                <Link to="settings" activeClassName="test"><button class="btn btn-success">Settings</button></Link>
+                <span>&nbsp; </span>
+                <button onClick={this.goBack.bind(this) }>Back</button>
             </div>
         );
     }
