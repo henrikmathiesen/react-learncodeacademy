@@ -14,7 +14,11 @@ const app = document.getElementById('app');
 
 ReactDOM.render(
     <Router history={hashHistory}>
-        <Route path="/" component={Layout}></Route>
+        <Route path="/" component={Layout}>
+            <IndexRoute component={Featured}></IndexRoute>
+            <Route path="archives" component={Archives}></Route>
+            <Route path="settings" component={Settings}></Route>
+        </Route>
     </Router>,
     app
 );
