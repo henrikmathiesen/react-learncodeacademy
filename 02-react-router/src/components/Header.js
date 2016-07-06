@@ -11,8 +11,11 @@ export default class Layout extends React.Component {
 
     render() {
         const {history} = this.props.routeArgs;
-        const {location} = this.props;
-        console.log(history.isActive('archives'));
+        const {location} = this.props.routeArgs;
+
+        const archivesIsActive = location.pathname.match(/^\/archives/) !== null;
+        console.log("history.isActive: " + history.isActive('archives'));
+        console.log("archivesIsActive: " + archivesIsActive);
 
         return (
             <div class="col-sm-12">
