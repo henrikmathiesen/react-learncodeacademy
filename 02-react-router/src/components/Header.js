@@ -11,10 +11,11 @@ export default class Layout extends React.Component {
 
     render() {
         const {history} = this.props.routeArgs;
+        const {location} = this.props;
         console.log(history.isActive('archives'));
 
         return (
-            <div>
+            <div class="col-sm-12">
                 <h1>Henry News</h1>
                 <Link to="archives" activeClassName="test">Archives</Link>
                 <span>&nbsp; </span>
