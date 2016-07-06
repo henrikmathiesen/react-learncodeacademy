@@ -3,6 +3,7 @@ import Header       from '../components/Header'
 
 export default class Layout extends React.Component {
     render() {
+        // Teacher says it can be clean way to do component based inline styles like this, but only for a couple of rules, for many then use a stylesheet
         const containerStyle = {
             marginTop: '60px'
         }
