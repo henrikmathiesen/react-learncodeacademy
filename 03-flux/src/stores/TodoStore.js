@@ -43,10 +43,6 @@ export default class TodoStore extends EventEmitter {
     }
 
     handleActions(action) {
-        console.log("TodoStore recieved an action");
-        console.log(action);
-        console.log("/TodoStore recieved an action");
-
         switch(action.type) {
             case "CREATE_TODO":
                 this.createTodo(action.text);
