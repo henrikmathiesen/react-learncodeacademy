@@ -1,10 +1,11 @@
 import React from 'react';
+import Todo from '../components/Todo';
 
-export class default Todos extends React.Component {
+export default class Todos extends React.Component {
     constructor(){
         super();
 
-        this.state {
+        this.state = {
             todos: [
                 {
                     id: 1,
@@ -29,7 +30,7 @@ export class default Todos extends React.Component {
         const {todos} = this.state;
 
         const TodoComponents = todos.map((todo) => {
-            return <Todo key={todo.id} />
+            return <Todo key={todo.id} text={todo.text} complete={todo.complete} />
         });
 
         return (
