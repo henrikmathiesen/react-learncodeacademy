@@ -24,12 +24,26 @@ export default class TodoStore extends EventEmitter {
             ]
     }
 
-    static getAll() {
+    getAll() {
         return this.todos;
+    }
+
+    createTodo(text) {
+        var id = this.todos[this.todos.length - 1].id + 1;
+        const todo = {
+            id: id,
+            text: text,
+            complete: false
+        }
+
+        this.todos.push(todo);
+
+        this.emit('change');
     }
 }
 
 const todoStore = new TodoStore();
+//window.todoStore = todoStore; // debug for creating todos in console
 export default todoStore;
 
 // Why create one instance and return it when imported? Wouldnt static members be better?

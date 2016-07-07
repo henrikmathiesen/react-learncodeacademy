@@ -11,11 +11,19 @@ export default class Todos extends React.Component {
         };        
     }
 
+    componentWillMount(){
+        TodoStore.on('change', () => {
+            this.setState({
+                todos: TodoStore.getAll()
+            });
+        });
+    }
+
     render() {
         const {todos} = this.state;
 
         const TodoComponents = todos.map((todo) => {
-            return <Todo key={todo.id} text={todo.text} complete={todo.complete} />
+            return <Todo key={todo.id} id={todo.id} text={todo.text} complete={todo.complete} />
         });
 
         return (
