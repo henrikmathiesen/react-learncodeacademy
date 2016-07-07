@@ -35,7 +35,7 @@ export default class Todos extends React.Component {
 
         return (
             <div>
-                <h1>Todos</h1>
+                <h2>Todos</h2>
                 <ul>{TodoComponents}</ul>
             </div>
         );

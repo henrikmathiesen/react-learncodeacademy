@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, IndexLink } from 'react-router';
 
 export default class Nav extends React.Component {
     render() {
         return (
-            <div>
-                <Link to="/" activeclassName="active">Home</Link>
-                <Link to="favorites" activeclassName="active">Favorites</Link>
-                <Link to="settings" activeclassName="active">Settings</Link>
+            <div class="td-nav">
+                <IndexLink to="/" activeClassName="td-nav-active">Home</IndexLink>
+                <Link to="favorites" activeClassName="td-nav-active">Favorites</Link>
+                <Link to="settings" activeClassName="td-nav-active">Settings</Link>
             </div>
         );
     }

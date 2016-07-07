@@ -4,7 +4,7 @@ export default class Favorites extends React.Component {
   render() {
     return (
       <div>
-        <h1>Favorites</h1>
+        <h2>Favorites</h2>
       </div>
     );
   }

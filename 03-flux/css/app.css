@@ -1,0 +1,8 @@
+.td-nav a {
+    margin-right:8px;
+    text-decoration: none;
+}
+
+.td-nav a.td-nav-active {
+    border-bottom: 2px solid darkcyan;
+}
