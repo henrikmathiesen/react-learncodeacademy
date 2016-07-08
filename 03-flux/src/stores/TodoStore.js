@@ -1,6 +1,5 @@
 import { EventEmitter } from 'events'; // this comes nativly from node
 import dispatcher from '../Dispatcher';
-import axios from 'axios';
 
 export default class TodoStore extends EventEmitter {
     constructor() {
@@ -42,16 +41,9 @@ export default class TodoStore extends EventEmitter {
         this.emit('change');
     }
 
-    reloadTodos() {
-        let that = this;
-        axios.get('http://jsonplaceholder.typicode.com/posts/1')
-            .then(function (response) {
-                console.log(response);
-                that.emit('change');
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+    gotTodos(todos) {
+        console.log(todos);
+        this.emit('change');
     }
 
     handleActions(action) {
@@ -59,8 +51,11 @@ export default class TodoStore extends EventEmitter {
             case "CREATE_TODO":
                 this.createTodo(action.text);
                 break;
-            case "RELOAD_TODOS":
-                this.reloadTodos();
+            case "FETCH_TODOS":
+                this.emit('fetch');
+                break;
+            case "GOT_TODOS":
+                this.gotTodos(action.todos);
                 break;
         }
     }

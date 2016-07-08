@@ -8,7 +8,8 @@ export default class Todos extends React.Component {
         super();
 
         this.state = {
-            todos: TodoStore.getAll()
+            todos: TodoStore.getAll(),
+            fetch: false
         };        
     }
 
@@ -19,7 +20,15 @@ export default class Todos extends React.Component {
         TodoStore.on('change', () => {
             console.log("change - getAll()");
             this.setState({
-                todos: TodoStore.getAll()
+                todos: TodoStore.getAll(),
+                fetch: false
+            });
+        });
+
+        TodoStore.on('fetch', () => {
+            console.log("fetch - show loading");
+            this.setState({
+                fetch: true
             });
         });
     }
@@ -42,10 +51,13 @@ export default class Todos extends React.Component {
             return <Todo key={todo.id} id={todo.id} text={todo.text} complete={todo.complete} />
         });
 
+        const isFetchClass = !this.state.fetch ? 'hidden' : '';
+
         return (
             <div>
                 <h2>Todos</h2>
                 <ul>{TodoComponents}</ul>
+                <div class={isFetchClass}>LOADING</div>
                 <div>
                     <button onClick={this.createTodo.bind(this)}>create todo</button>
                 </div>

@@ -1,4 +1,5 @@
 import dispatcher from '../Dispatcher';
+import axios from 'axios';
 
 export function createTodo(text) {
     dispatcher.dispatch({
@@ -14,8 +15,20 @@ export function deleteTodo(id) {
     });
 }
 
-export function reloadTodos(){
+export function reloadTodos() {
     dispatcher.dispatch({
-        type: "RELOAD_TODOS"
+        type: "FETCH_TODOS"
     });
+
+    axios.get('http://jsonplaceholder.typicode.com/posts/1')
+        .then(function (response) {
+            dispatcher.dispatch({
+                type: "GOT_TODOS",
+                todos: response.data
+            });
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
 }
