@@ -12,13 +12,20 @@ export default class Todos extends React.Component {
         };        
     }
 
+    //
+    // Listen for changes and react
+
     componentWillMount(){
         TodoStore.on('change', () => {
+            console.log("change - getAll()");
             this.setState({
                 todos: TodoStore.getAll()
             });
         });
     }
+
+    //
+    // Fire Actions
 
     createTodo(){
         TodoActions.createTodo(Date.now().toString());

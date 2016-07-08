@@ -15,5 +15,7 @@ export function deleteTodo(id) {
 }
 
 export function reloadTodos(){
-    
+    dispatcher.dispatch({
+        type: "RELOAD_TODOS"
+    });
 }
