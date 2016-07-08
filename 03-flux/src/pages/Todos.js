@@ -24,6 +24,10 @@ export default class Todos extends React.Component {
         TodoActions.createTodo(Date.now().toString());
     }
 
+    reloadTodos(){
+        TodoActions.reloadTodos();
+    }
+
     render() {
         const {todos} = this.state;
 
@@ -37,6 +41,9 @@ export default class Todos extends React.Component {
                 <ul>{TodoComponents}</ul>
                 <div>
                     <button onClick={this.createTodo.bind(this)}>create todo</button>
+                </div>
+                <div>
+                    <button onClick={this.reloadTodos.bind(this)}>Reload</button>
                 </div>
             </div>
         );
