@@ -1,7 +1,7 @@
 import { EventEmitter } from 'events'; // this comes nativly from node
 import dispatcher from '../Dispatcher';
 
-export default class TodoStore extends EventEmitter {
+class TodoStore extends EventEmitter {
     constructor() {
         super();
 

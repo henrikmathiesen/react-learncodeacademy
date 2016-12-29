@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "tsd install",
     "webpack-00": "webpack --config ./00-module-loaders/webpack.config.js",
     "webpack-01": "webpack --config ./01-basic-react/webpack.config.js",
     "webpack-02": "webpack --config ./02-react-router/webpack.config.js",
