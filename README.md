@@ -1,4 +1,4 @@
-# reactLearnCodeAcademy
+# React Learn Code Academy
 
 More React, ES6, learning from youtube course on learn code academy:
 
