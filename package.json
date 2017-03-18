@@ -4,7 +4,6 @@
   "description": "More React, learning from youtube course on learn code academy:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "tsd install",
     "webpack-00": "webpack --config ./00-module-loaders/webpack.config.js",
     "webpack-01": "webpack --config ./01-basic-react/webpack.config.js",
@@ -39,6 +38,7 @@
     "jquery": "3.0.0",
     "react": "15.2.0",
     "react-dom": "15.2.0",
-    "react-router": "2.5.2"
+    "react-router": "2.5.2",
+    "tsd": "0.6.5"
   }
 }
